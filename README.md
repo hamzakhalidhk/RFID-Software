@@ -4,7 +4,7 @@ HK RFID Monitor is basically a Python based software for RFID. It reads the COM 
 # How is the data coming to COM port?
 In this project arduino is used to send data on the COM port so it is easier to understand that how the data is coming to COM port for those who have worked with arduino or AVR. 
 
-Let's assume that our microcontroller board (arduino UNO) is connected on COM port 4 of our PC and take the following dummy code of arduino:
+Let's assume that our microcontroller board (arduino UNO) is connected to COM port 4 of our PC and take the following dummy arduino code:
 
     void setup() {
       Serial.begin(9600);
