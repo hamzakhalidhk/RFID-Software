@@ -71,5 +71,7 @@ You need to make the following changes for your own data:
 
 2. Make changes in the lines (61-72) of python program which are used for string parsing to separate values from the string (in our case numeric values if id, name and roll number).
 
-3. Change names of columns in the database and of tree used in the python code.
+3. Change names of the columns in database.
+
+4. Change the tree used in python code.
 
