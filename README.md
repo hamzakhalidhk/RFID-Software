@@ -30,7 +30,7 @@ So, the output on the Serial monitor will be:
 # How is the software processing data?
 The following line (Line 121) in our Python file allows you to type the port name on which the data is coming. As our arduino is connected to the port No. 4 so we will write 'COM4' in the input box:
 
-Labelh=Label(root,text='Enter port Name. E.g: COM4',font=("Arial","14")).place(x=120,y=40)
+    Labelh=Label(root,text='Enter port Name. E.g: COM4',font=("Arial","14")).place(x=120,y=40)
 
 The python program now starts reading COM4 and saves every line in a string with the help of following lines (Line 55,56):
 
