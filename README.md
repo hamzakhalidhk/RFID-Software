@@ -63,7 +63,7 @@ The values of id, name and roll number are stored in variables v,c an p respecti
         print(row)
     self.tree.insert("", 0, text="FETCHED --- >", values=(date, v, c, p))
 
-# How to make changings for your customized data?
+# How to make changings for your personal data?
 You need to make the following changes for your own data:
 
 1. You need to change the Arduino code which is sending data to COM port. 
