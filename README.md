@@ -2,12 +2,12 @@
 
 ## Note: This tutorial is available on my [Hackster](https://www.hackster.io/hamzakhalidonline/python-software-for-arduino-rfid-415a91) profile 
 
-HK RFID Monitor is basically a Python based software for RFID. It reads the data coming to COM port and displays it on your laptop screen. The data used in this project is IDs, names and roll numbers of students, coming from a micro-controller (AVR or simply arduino). The software reads the values with 'Serial' module of Python and displays it using 'Tkinker'.
+HK RFID Monitor is a Python-based software for RFID. It reads the data coming to COM port and displays it on your laptop screen. The data used in this project is IDs, names and roll numbers of students, coming from a micro-controller (AVR or simply Arduino). The software reads the values with the 'Serial' module of Python and displays it using 'Tkinker.'
 
 ![Screenshot](https://hackster.imgix.net/uploads/attachments/499136/whatsapp-image-2017-12-23-at-2-31-38-am-e1514208856685_rGfbGjmtZ3.jpeg?auto=compress%2Cformat&w=900&h=675&fit=min)
 
 # How is the data coming to COM port?
-In this project arduino is used to send data to the COM port so it is easier to understand that how the data is coming to COM port for those who have worked with arduino or AVR microcontroller. 
+In this project, Arduino is used to sending data to the COM port, so it is easier to understand that how the data is coming to COM port for those who have worked with Arduino or AVR microcontroller.
 
 Let us assume that our microcontroller board (arduino UNO) is connected to COM port 4 of our PC and take the following dummy arduino code:
 
@@ -58,7 +58,6 @@ The program now does string parsing to separate the values of id, name and roll 
         p = string[j + 13:k-1]
         
 # Storing in the database
-   
 The values of id, name and roll number are stored in variables v,c an p respectively. The values are then stored in sqlite3 database and are displayed on the software screen with the help of following lines:
 
     call.execute("INSERT INTO rfid (datestamp, id, name, rollnumber) VALUES (?,?,?,?)", (date, v, c, p))
@@ -69,14 +68,9 @@ The values of id, name and roll number are stored in variables v,c an p respecti
     self.tree.insert("", 0, text="FETCHED --- >", values=(date, v, c, p))
 
 # How to make changings for your own data?
-You need to make the following changes for your own data:
-
-1. You need to change the arduino code which is sending data to COM port. 
-*Note that your source of sending data to the COM port can be anything so make changes accordingly.
-
-2. Make changes in lines (61-72) of Python program which are used for string parsing to separate values from the string (in our case alphanumeric values if id, name and roll number).
-
-3. Change the names of columns in database.
-
-4. Change the tree used in python code.
+It would be best if you made the following changes for your data:
+1. You need to change the Arduino code, which is sending data to COM port. *Note that your source of sending data to the COM port can be anything, so make changes accordingly.*
+2. Make changes in lines (61-72) of Python program, which are used for string-parsing to separate values from the string (in our case, alphanumeric values if the id, name, and roll number).
+3. Change the names of columns in the database.
+4. Change the tree used in the python code.
 
